@@ -55,6 +55,8 @@
 		1A21C6DA1BB137E700053EC0 /* WXDataServiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A21C6D81BB137E700053EC0 /* WXDataServiece.m */; };
 		1A21C6E21BB1398B00053EC0 /* BootAnimayionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A21C6E11BB1398B00053EC0 /* BootAnimayionView.m */; };
 		1A21C6E61BB13BE500053EC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A21C6E51BB13BE500053EC0 /* CoreGraphics.framework */; };
+		1A45BACE1BB2738E002573BF /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BACD1BB2738E002573BF /* MYViewController.m */; };
+		1A45BAD11BB273A3002573BF /* insViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BAD01BB273A3002573BF /* insViewController.m */; };
 		1A966EA71BB23DAE00BA279E /* btnbg_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E921BB23DAE00BA279E /* btnbg_blue.png */; };
 		1A966EA81BB23DAE00BA279E /* cinemaCouponMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E931BB23DAE00BA279E /* cinemaCouponMark@2x.png */; };
 		1A966EA91BB23DAE00BA279E /* cinemaSeatMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E941BB23DAE00BA279E /* cinemaSeatMark@2x.png */; };
@@ -173,6 +175,10 @@
 		1A21C6E01BB1398B00053EC0 /* BootAnimayionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BootAnimayionView.h; sourceTree = "<group>"; };
 		1A21C6E11BB1398B00053EC0 /* BootAnimayionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BootAnimayionView.m; sourceTree = "<group>"; };
 		1A21C6E51BB13BE500053EC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1A45BACC1BB2738E002573BF /* MYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
+		1A45BACD1BB2738E002573BF /* MYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
+		1A45BACF1BB273A3002573BF /* insViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insViewController.h; sourceTree = "<group>"; };
+		1A45BAD01BB273A3002573BF /* insViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insViewController.m; sourceTree = "<group>"; };
 		1A966E921BB23DAE00BA279E /* btnbg_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnbg_blue.png; sourceTree = "<group>"; };
 		1A966E931BB23DAE00BA279E /* cinemaCouponMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemaCouponMark@2x.png"; sourceTree = "<group>"; };
 		1A966E941BB23DAE00BA279E /* cinemaSeatMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemaSeatMark@2x.png"; sourceTree = "<group>"; };
@@ -507,6 +513,10 @@
 				5A5BBA221BAFFE53009028DB /* invitationTableViewController.m */,
 				5A5BBA1B1BAFED12009028DB /* sendViewController.h */,
 				5A5BBA1C1BAFED12009028DB /* sendViewController.m */,
+				1A45BACC1BB2738E002573BF /* MYViewController.h */,
+				1A45BACD1BB2738E002573BF /* MYViewController.m */,
+				1A45BACF1BB273A3002573BF /* insViewController.h */,
+				1A45BAD01BB273A3002573BF /* insViewController.m */,
 			);
 			name = "\binvitation";
 			sourceTree = "<group>";
@@ -813,11 +823,13 @@
 				1A21C6E21BB1398B00053EC0 /* BootAnimayionView.m in Sources */,
 				5A8DE8521BAE769A0022C27D /* Utilities.m in Sources */,
 				1A966ECC1BB23F1500BA279E /* CinemaCell.m in Sources */,
+				1A45BACE1BB2738E002573BF /* MYViewController.m in Sources */,
 				1A966EC91BB23F0000BA279E /* CinemaViewController.m in Sources */,
 				5AF6F5871BABE58F008E1A85 /* main.m in Sources */,
 				5A8DE8671BAE76B90022C27D /* UIViewController+ECSlidingViewController.m in Sources */,
 				1A21C6501BB0FAB700053EC0 /* LeftViewController.m in Sources */,
 				5A5BBA1A1BAFDB6F009028DB /* MainTabViewController.m in Sources */,
+				1A45BAD11BB273A3002573BF /* insViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
