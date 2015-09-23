@@ -56,7 +56,9 @@
 		1A21C6E21BB1398B00053EC0 /* BootAnimayionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A21C6E11BB1398B00053EC0 /* BootAnimayionView.m */; };
 		1A21C6E61BB13BE500053EC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A21C6E51BB13BE500053EC0 /* CoreGraphics.framework */; };
 		1A45BACE1BB2738E002573BF /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BACD1BB2738E002573BF /* MYViewController.m */; };
-		1A45BAD11BB273A3002573BF /* insViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BAD01BB273A3002573BF /* insViewController.m */; };
+		1A45BADA1BB2A58A002573BF /* insTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BAD81BB2A58A002573BF /* insTableViewCell.m */; };
+		1A45BADB1BB2A58A002573BF /* insTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A45BAD91BB2A58A002573BF /* insTableViewCell.xib */; };
+		1A45BADE1BB2A902002573BF /* insViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BADD1BB2A902002573BF /* insViewController.m */; };
 		1A966EA71BB23DAE00BA279E /* btnbg_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E921BB23DAE00BA279E /* btnbg_blue.png */; };
 		1A966EA81BB23DAE00BA279E /* cinemaCouponMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E931BB23DAE00BA279E /* cinemaCouponMark@2x.png */; };
 		1A966EA91BB23DAE00BA279E /* cinemaSeatMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E941BB23DAE00BA279E /* cinemaSeatMark@2x.png */; };
@@ -177,8 +179,11 @@
 		1A21C6E51BB13BE500053EC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1A45BACC1BB2738E002573BF /* MYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
 		1A45BACD1BB2738E002573BF /* MYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
-		1A45BACF1BB273A3002573BF /* insViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insViewController.h; sourceTree = "<group>"; };
-		1A45BAD01BB273A3002573BF /* insViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insViewController.m; sourceTree = "<group>"; };
+		1A45BAD71BB2A58A002573BF /* insTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insTableViewCell.h; sourceTree = "<group>"; };
+		1A45BAD81BB2A58A002573BF /* insTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insTableViewCell.m; sourceTree = "<group>"; };
+		1A45BAD91BB2A58A002573BF /* insTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = insTableViewCell.xib; sourceTree = "<group>"; };
+		1A45BADC1BB2A902002573BF /* insViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insViewController.h; sourceTree = "<group>"; };
+		1A45BADD1BB2A902002573BF /* insViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insViewController.m; sourceTree = "<group>"; };
 		1A966E921BB23DAE00BA279E /* btnbg_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnbg_blue.png; sourceTree = "<group>"; };
 		1A966E931BB23DAE00BA279E /* cinemaCouponMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemaCouponMark@2x.png"; sourceTree = "<group>"; };
 		1A966E941BB23DAE00BA279E /* cinemaSeatMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemaSeatMark@2x.png"; sourceTree = "<group>"; };
@@ -511,12 +516,15 @@
 			children = (
 				5A5BBA211BAFFE53009028DB /* invitationTableViewController.h */,
 				5A5BBA221BAFFE53009028DB /* invitationTableViewController.m */,
+				1A45BAD71BB2A58A002573BF /* insTableViewCell.h */,
+				1A45BAD81BB2A58A002573BF /* insTableViewCell.m */,
+				1A45BAD91BB2A58A002573BF /* insTableViewCell.xib */,
 				5A5BBA1B1BAFED12009028DB /* sendViewController.h */,
 				5A5BBA1C1BAFED12009028DB /* sendViewController.m */,
 				1A45BACC1BB2738E002573BF /* MYViewController.h */,
 				1A45BACD1BB2738E002573BF /* MYViewController.m */,
-				1A45BACF1BB273A3002573BF /* insViewController.h */,
-				1A45BAD01BB273A3002573BF /* insViewController.m */,
+				1A45BADC1BB2A902002573BF /* insViewController.h */,
+				1A45BADD1BB2A902002573BF /* insViewController.m */,
 			);
 			name = "\binvitation";
 			sourceTree = "<group>";
@@ -751,6 +759,7 @@
 				1A21C6CD1BB1370E00053EC0 /* Default-568h.jpg in Resources */,
 				1A21C6C71BB1370400053EC0 /* 5@2x.png in Resources */,
 				1A21C6B21BB1370400053EC0 /* 16@2x.png in Resources */,
+				1A45BADB1BB2A58A002573BF /* insTableViewCell.xib in Resources */,
 				1A966EC01BB23E9A00BA279E /* district_list.json in Resources */,
 				1A21C6B61BB1370400053EC0 /* 1@2x.png in Resources */,
 				1A966EB91BB23DAE00BA279E /* ypf_on@2x.png in Resources */,
@@ -809,6 +818,7 @@
 				5A5BBA171BAFDB4E009028DB /* registerViewController.m in Sources */,
 				1A966ED21BB23FAD00BA279E /* WXNavigationController.m in Sources */,
 				1A21C6DA1BB137E700053EC0 /* WXDataServiece.m in Sources */,
+				1A45BADA1BB2A58A002573BF /* insTableViewCell.m in Sources */,
 				5A8DE8531BAE769A0022C27D /* storageMgr.m in Sources */,
 				5A8DE8631BAE76B90022C27D /* ECSlidingViewController.m in Sources */,
 				5A5BBA1D1BAFED12009028DB /* sendViewController.m in Sources */,
@@ -829,7 +839,7 @@
 				5A8DE8671BAE76B90022C27D /* UIViewController+ECSlidingViewController.m in Sources */,
 				1A21C6501BB0FAB700053EC0 /* LeftViewController.m in Sources */,
 				5A5BBA1A1BAFDB6F009028DB /* MainTabViewController.m in Sources */,
-				1A45BAD11BB273A3002573BF /* insViewController.m in Sources */,
+				1A45BADE1BB2A902002573BF /* insViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface invitationTableViewController : UITableViewController
+@interface invitationTableViewController : UITableViewController{
+       UITableView *_tableView;
+}
 
+@property(strong,nonatomic)NSArray*objectsForShow;
 @end
