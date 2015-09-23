@@ -10,31 +10,31 @@
 	<string>邀影</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>69C362EE597F88EB9C7D94A0034C284C35959C9B</key>
-		<string>https://github.com/CXYCM/YaoYing.git</string>
+		<key>F9B96FF7747E13E02A8746BE949FC99E28736649</key>
+		<string>https://github.com/CXYCM/Movies.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>邀影副本 3363636363/邀影.xcodeproj</string>
+	<string>邀影——（开机动画、侧滑、影院 、发邀约 、登录注册  ）/邀影.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>69C362EE597F88EB9C7D94A0034C284C35959C9B</key>
+		<key>F9B96FF7747E13E02A8746BE949FC99E28736649</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/CXYCM/YaoYing.git</string>
+	<string>https://github.com/CXYCM/Movies.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>69C362EE597F88EB9C7D94A0034C284C35959C9B</string>
+	<string>F9B96FF7747E13E02A8746BE949FC99E28736649</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>69C362EE597F88EB9C7D94A0034C284C35959C9B</string>
+			<string>F9B96FF7747E13E02A8746BE949FC99E28736649</string>
 			<key>IDESourceControlWCCName</key>
-			<string>DY</string>
+			<string>Movies</string>
 		</dict>
 	</array>
 </dict>
