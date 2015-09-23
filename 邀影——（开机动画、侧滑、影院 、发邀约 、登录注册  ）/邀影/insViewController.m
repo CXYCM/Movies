@@ -33,12 +33,12 @@
     NSDateFormatter*formatter=[[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSString*dataString=[formatter stringFromDate:_Booking[@"date"]];
-    _timeTF.text=[NSString stringWithFormat:@"%@",dataString];
-    _placeTF.text=[NSString stringWithFormat:@"%@",_Booking[@"place"]];
-    _numberTF.text=[NSString stringWithFormat:@"%@",_Booking[@"number"]];
-    _movieTF.text=[NSString stringWithFormat:@"%@",_Booking[@"movie"]];
-    _wayTF.text=[NSString stringWithFormat:@"%@",_Booking[@"way"]];
-    _ins.text=[NSString stringWithFormat:@"%@",_Booking[@"ins"]];
+    _timeTF.text=[NSString stringWithFormat:@"电影时间：%@",dataString];
+    _placeTF.text=[NSString stringWithFormat:@"电影地点：%@",_Booking[@"place"]];
+    _numberTF.text=[NSString stringWithFormat:@"电影人数：%@",_Booking[@"number"]];
+    _movieTF.text=[NSString stringWithFormat:@"电影：%@",_Booking[@"movie"]];
+    _wayTF.text=[NSString stringWithFormat:@"电影方式：%@",_Booking[@"way"]];
+    _ins.text=[NSString stringWithFormat:@"邀请：%@",_Booking[@"ins"]];
 
 }
 

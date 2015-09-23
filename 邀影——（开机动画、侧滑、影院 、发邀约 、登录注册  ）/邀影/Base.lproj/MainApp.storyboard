@@ -543,7 +543,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl3-Km-3EZ">
-                                <rect key="frame" x="16" y="469" width="288" height="30"/>
+                                <rect key="frame" x="56" y="469" width="248" height="30"/>
                                 <state key="normal" title="删除">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -561,37 +561,37 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请方式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjD-zT-2BN">
-                                <rect key="frame" x="16" y="336" width="68" height="21"/>
+                                <rect key="frame" x="56" y="336" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请地点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S8-TV-0Sz">
-                                <rect key="frame" x="16" y="418" width="68" height="21"/>
+                                <rect key="frame" x="56" y="418" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请电影" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mE-KY-THc">
-                                <rect key="frame" x="16" y="295" width="68" height="21"/>
+                                <rect key="frame" x="56" y="295" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBI-1k-hMJ">
-                                <rect key="frame" x="16" y="377" width="68" height="21"/>
+                                <rect key="frame" x="56" y="377" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请男女" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-GL-NdZ">
-                                <rect key="frame" x="134" y="336" width="68" height="21"/>
+                                <rect key="frame" x="196" y="336" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-qP-qsx">
-                                <rect key="frame" x="134" y="295" width="68" height="21"/>
+                                <rect key="frame" x="196" y="295" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -599,10 +599,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9mE-KY-THc" firstAttribute="leading" secondItem="rTj-F0-MGJ" secondAttribute="leading" constant="16" id="1yV-yv-Uva"/>
-                            <constraint firstItem="vjD-zT-2BN" firstAttribute="leading" secondItem="rTj-F0-MGJ" secondAttribute="leading" constant="16" id="3DP-6o-104"/>
+                            <constraint firstItem="9mE-KY-THc" firstAttribute="leading" secondItem="rTj-F0-MGJ" secondAttribute="leading" constant="56" id="1yV-yv-Uva"/>
+                            <constraint firstItem="vjD-zT-2BN" firstAttribute="leading" secondItem="rTj-F0-MGJ" secondAttribute="leading" constant="56" id="3DP-6o-104"/>
                             <constraint firstItem="vjD-zT-2BN" firstAttribute="top" secondItem="9mE-KY-THc" secondAttribute="bottom" constant="20" id="3vk-J4-X8K"/>
-                            <constraint firstItem="4S8-TV-0Sz" firstAttribute="leading" secondItem="rTj-F0-MGJ" secondAttribute="leading" constant="16" id="8sB-hb-RQ5"/>
                             <constraint firstItem="vjD-zT-2BN" firstAttribute="leading" secondItem="Gl3-Km-3EZ" secondAttribute="leading" id="ACa-0Y-Iq4"/>
                             <constraint firstAttribute="centerX" secondItem="txg-aD-Tqs" secondAttribute="centerX" id="D4n-9Q-aOu"/>
                             <constraint firstAttribute="trailing" secondItem="Gl3-Km-3EZ" secondAttribute="trailing" constant="16" id="FbG-jR-O3n"/>
@@ -610,16 +609,20 @@
                             <constraint firstItem="vjD-zT-2BN" firstAttribute="leading" secondItem="IBI-1k-hMJ" secondAttribute="leading" id="JKz-KJ-A2J"/>
                             <constraint firstItem="Gl3-Km-3EZ" firstAttribute="top" secondItem="4S8-TV-0Sz" secondAttribute="bottom" constant="30" id="Jc1-Yo-sZ6"/>
                             <constraint firstItem="Gl3-Km-3EZ" firstAttribute="leading" secondItem="rTj-F0-MGJ" secondAttribute="leading" constant="16" id="Kdg-TW-p9G"/>
-                            <constraint firstItem="Sc2-qP-qsx" firstAttribute="leading" secondItem="9mE-KY-THc" secondAttribute="trailing" constant="50" id="NAT-6u-r1G"/>
-                            <constraint firstItem="IBI-1k-hMJ" firstAttribute="leading" secondItem="rTj-F0-MGJ" secondAttribute="leading" constant="16" id="ON7-6d-4rG"/>
                             <constraint firstItem="vjD-zT-2BN" firstAttribute="leading" secondItem="4S8-TV-0Sz" secondAttribute="leading" id="Oye-SV-isC"/>
-                            <constraint firstItem="QhC-GL-NdZ" firstAttribute="leading" secondItem="vjD-zT-2BN" secondAttribute="trailing" constant="50" id="cQh-Xg-yoh"/>
+                            <constraint firstAttribute="trailing" secondItem="QhC-GL-NdZ" secondAttribute="trailing" constant="56" id="ZLL-ur-1sS"/>
                             <constraint firstItem="txg-aD-Tqs" firstAttribute="top" secondItem="VxV-wh-f4t" secondAttribute="bottom" constant="1" id="dkk-sf-4lj"/>
                             <constraint firstItem="9mE-KY-THc" firstAttribute="centerY" secondItem="Sc2-qP-qsx" secondAttribute="centerY" id="lG6-DR-iR7"/>
                             <constraint firstItem="4S8-TV-0Sz" firstAttribute="top" secondItem="IBI-1k-hMJ" secondAttribute="bottom" constant="20" id="leD-C2-lMf"/>
                             <constraint firstItem="vjD-zT-2BN" firstAttribute="centerY" secondItem="QhC-GL-NdZ" secondAttribute="centerY" id="pdA-Jx-Pu4"/>
                             <constraint firstItem="IBI-1k-hMJ" firstAttribute="top" secondItem="vjD-zT-2BN" secondAttribute="bottom" constant="20" id="q30-jI-qXb"/>
+                            <constraint firstAttribute="trailing" secondItem="Sc2-qP-qsx" secondAttribute="trailing" constant="56" id="q7o-IS-uPM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kdg-TW-p9G"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="sfM-zU-Hvv">
                         <barButtonItem key="rightBarButtonItem" title="修改" id="63Q-W3-PnM">
@@ -1338,7 +1341,7 @@
                             <constraint firstItem="zuo-xy-H9S" firstAttribute="top" secondItem="glH-A0-x3o" secondAttribute="bottom" id="czf-lk-zTy"/>
                             <constraint firstAttribute="trailing" secondItem="zuo-xy-H9S" secondAttribute="trailing" id="dpb-88-qaf"/>
                             <constraint firstAttribute="trailing" secondItem="1ua-LQ-Iwz" secondAttribute="trailing" constant="8" id="dw0-6j-k4n"/>
-                            <constraint firstAttribute="centerX" secondItem="glH-A0-x3o" secondAttribute="centerX" id="j9F-Bb-avJ"/>
+                            <constraint firstItem="2oG-R2-pdk" firstAttribute="centerX" secondItem="glH-A0-x3o" secondAttribute="centerX" id="l37-Ds-d1W"/>
                             <constraint firstItem="yq0-jp-9bi" firstAttribute="leading" secondItem="yJz-2u-trN" secondAttribute="leading" constant="16" id="n7p-0B-PXt"/>
                         </constraints>
                     </view>
