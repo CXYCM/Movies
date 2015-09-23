@@ -153,9 +153,9 @@
     //升序排序
     [query orderByAscending:@"date"];
     //菊花
-    //UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
     [query findObjectsInBackgroundWithBlock:^(NSArray *returnedObjects, NSError *error) {
-        // [aiv stopAnimating];
+         [aiv stopAnimating];
         if (!error) {
             _objectsForShow = returnedObjects;
             NSLog(@"%@", _objectsForShow);
