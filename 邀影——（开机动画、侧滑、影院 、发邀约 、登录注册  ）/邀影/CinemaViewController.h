@@ -1,0 +1,21 @@
+//
+//  CinemaViewController.h
+//  邀影
+//
+//  Created by 陈铭铭铭铭 on 15/9/22.
+//  Copyright (c) 2015年 罗凌云. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface CinemaViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+{
+    UITableView *_tableView;
+    NSArray *_districtArray;
+    NSMutableDictionary *_cinemaDictionary;
+    BOOL close[30];
+    
+}
+
+
+@end
