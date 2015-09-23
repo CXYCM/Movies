@@ -59,6 +59,8 @@
 		1A45BADA1BB2A58A002573BF /* insTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BAD81BB2A58A002573BF /* insTableViewCell.m */; };
 		1A45BADB1BB2A58A002573BF /* insTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A45BAD91BB2A58A002573BF /* insTableViewCell.xib */; };
 		1A45BADE1BB2A902002573BF /* insViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BADD1BB2A902002573BF /* insViewController.m */; };
+		1A45BAE11BB2AB42002573BF /* invitationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45BAE01BB2AB42002573BF /* invitationViewController.m */; };
+		1A45BAE61BB2B0DA002573BF /* nav_bg_all.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A45BAE51BB2B0DA002573BF /* nav_bg_all.png */; };
 		1A966EA71BB23DAE00BA279E /* btnbg_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E921BB23DAE00BA279E /* btnbg_blue.png */; };
 		1A966EA81BB23DAE00BA279E /* cinemaCouponMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E931BB23DAE00BA279E /* cinemaCouponMark@2x.png */; };
 		1A966EA91BB23DAE00BA279E /* cinemaSeatMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A966E941BB23DAE00BA279E /* cinemaSeatMark@2x.png */; };
@@ -91,7 +93,6 @@
 		5A5BBA171BAFDB4E009028DB /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BBA161BAFDB4E009028DB /* registerViewController.m */; };
 		5A5BBA1A1BAFDB6F009028DB /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BBA191BAFDB6F009028DB /* MainTabViewController.m */; };
 		5A5BBA1D1BAFED12009028DB /* sendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BBA1C1BAFED12009028DB /* sendViewController.m */; };
-		5A5BBA231BAFFE53009028DB /* invitationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BBA221BAFFE53009028DB /* invitationTableViewController.m */; };
 		5A8DE8441BAE75E30022C27D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8DE8431BAE75E30022C27D /* Bolts.framework */; };
 		5A8DE8461BAE75ED0022C27D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8DE8451BAE75ED0022C27D /* Parse.framework */; };
 		5A8DE8481BAE760A0022C27D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8DE8471BAE760A0022C27D /* SystemConfiguration.framework */; };
@@ -184,6 +185,9 @@
 		1A45BAD91BB2A58A002573BF /* insTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = insTableViewCell.xib; sourceTree = "<group>"; };
 		1A45BADC1BB2A902002573BF /* insViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insViewController.h; sourceTree = "<group>"; };
 		1A45BADD1BB2A902002573BF /* insViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insViewController.m; sourceTree = "<group>"; };
+		1A45BADF1BB2AB42002573BF /* invitationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "\binvitationViewController.h"; sourceTree = "<group>"; };
+		1A45BAE01BB2AB42002573BF /* invitationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "\binvitationViewController.m"; sourceTree = "<group>"; };
+		1A45BAE51BB2B0DA002573BF /* nav_bg_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bg_all.png; sourceTree = "<group>"; };
 		1A966E921BB23DAE00BA279E /* btnbg_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnbg_blue.png; sourceTree = "<group>"; };
 		1A966E931BB23DAE00BA279E /* cinemaCouponMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemaCouponMark@2x.png"; sourceTree = "<group>"; };
 		1A966E941BB23DAE00BA279E /* cinemaSeatMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cinemaSeatMark@2x.png"; sourceTree = "<group>"; };
@@ -224,8 +228,6 @@
 		5A5BBA191BAFDB6F009028DB /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabViewController.m; path = ../MainTabViewController.m; sourceTree = "<group>"; };
 		5A5BBA1B1BAFED12009028DB /* sendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendViewController.h; sourceTree = "<group>"; };
 		5A5BBA1C1BAFED12009028DB /* sendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendViewController.m; sourceTree = "<group>"; };
-		5A5BBA211BAFFE53009028DB /* invitationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = invitationTableViewController.h; sourceTree = "<group>"; };
-		5A5BBA221BAFFE53009028DB /* invitationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = invitationTableViewController.m; sourceTree = "<group>"; };
 		5A8DE8421BAE75A50022C27D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5A8DE8431BAE75E30022C27D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5A8DE8451BAE75ED0022C27D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -514,8 +516,8 @@
 		5AAEE7B81BAD2159007B52E3 /* invitation */ = {
 			isa = PBXGroup;
 			children = (
-				5A5BBA211BAFFE53009028DB /* invitationTableViewController.h */,
-				5A5BBA221BAFFE53009028DB /* invitationTableViewController.m */,
+				1A45BADF1BB2AB42002573BF /* invitationViewController.h */,
+				1A45BAE01BB2AB42002573BF /* invitationViewController.m */,
 				1A45BAD71BB2A58A002573BF /* insTableViewCell.h */,
 				1A45BAD81BB2A58A002573BF /* insTableViewCell.m */,
 				1A45BAD91BB2A58A002573BF /* insTableViewCell.xib */,
@@ -550,6 +552,7 @@
 		5AAEE7BB1BAD2205007B52E3 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				1A45BAE51BB2B0DA002573BF /* nav_bg_all.png */,
 				1A21C6CC1BB1370E00053EC0 /* Default-568h.jpg */,
 				1A21C68B1BB136A100053EC0 /* 启动页 */,
 				1A21C6741BB1367600053EC0 /* 开机动画 */,
@@ -780,6 +783,7 @@
 				1A21C6BC1BB1370400053EC0 /* 25@2x.png in Resources */,
 				1A21C6B91BB1370400053EC0 /* 22@2x.png in Resources */,
 				1A21C6BE1BB1370400053EC0 /* 27@2x.png in Resources */,
+				1A45BAE61BB2B0DA002573BF /* nav_bg_all.png in Resources */,
 				1A21C6851BB1369400053EC0 /* guideProgress1@2x.png in Resources */,
 				1A966EB51BB23DAE00BA279E /* xk_on@2x.png in Resources */,
 				1A21C6C81BB1370400053EC0 /* 6@2x.png in Resources */,
@@ -823,10 +827,10 @@
 				5A8DE8631BAE76B90022C27D /* ECSlidingViewController.m in Sources */,
 				5A5BBA1D1BAFED12009028DB /* sendViewController.m in Sources */,
 				1A966EC61BB23EF400BA279E /* CinemaModel.m in Sources */,
-				5A5BBA231BAFFE53009028DB /* invitationTableViewController.m in Sources */,
 				5A5BBA141BAFDB34009028DB /* loginViewController.m in Sources */,
 				5A8DE8641BAE76B90022C27D /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				1A21C6D91BB137E700053EC0 /* UIViewExt.m in Sources */,
+				1A45BAE11BB2AB42002573BF /* invitationViewController.m in Sources */,
 				5A8DE8651BAE76B90022C27D /* ECSlidingAnimationController.m in Sources */,
 				5A8DE8621BAE76B90022C27D /* ECSlidingSegue.m in Sources */,
 				5AF6F58A1BABE58F008E1A85 /* AppDelegate.m in Sources */,

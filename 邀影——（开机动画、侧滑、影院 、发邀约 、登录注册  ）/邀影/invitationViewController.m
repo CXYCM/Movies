@@ -1,32 +1,22 @@
 //
-//  MainTabViewController.m
+//  invitationViewController.m
 //  邀影
 //
-//  Created by 罗凌云 on 15/9/21.
+//  Created by ZY on 15/9/23.
 //  Copyright (c) 2015年 罗凌云. All rights reserved.
 //
 
-#import "MainTabViewController.h"
-#import "BootAnimayionView.h"
+#import "invitationViewController.h"
 
-@interface MainTabViewController ()
+@interface _invitationViewController ()
 
 @end
 
-@implementation MainTabViewController
+@implementation _invitationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    BootAnimayionView *bootView = [[BootAnimayionView alloc]init];
-    [self.view addSubview:bootView];
-    
-    
-    NSString *bgImg = @"nav_bg_all.png";
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:bgImg] forBarMetrics:UIBarMetricsDefault];
-    
-    
-
 }
 
 - (void)didReceiveMemoryWarning {

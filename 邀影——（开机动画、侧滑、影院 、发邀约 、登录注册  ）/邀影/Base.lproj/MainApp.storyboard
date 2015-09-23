@@ -81,39 +81,63 @@
         <!--邀影-->
         <scene sceneID="5Sn-nb-0Cb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSv-Fi-fRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="wnL-W2-vOa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="邀影" id="jL5-5B-MTB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VIc-Uu-Rlf">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pPM-ep-Yda" kind="relationship" relationship="rootViewController" id="g3p-BQ-CCc"/>
+                        <segue destination="YDa-mS-991" kind="relationship" relationship="rootViewController" id="6CE-rG-VjK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zSv-Fi-fRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="407"/>
+            <point key="canvasLocation" x="348" y="407"/>
         </scene>
         <!--邀影-->
-        <scene sceneID="vwC-QZ-Qe5">
+        <scene sceneID="ejQ-5x-HGO">
             <objects>
-                <tableViewController id="pPM-ep-Yda" customClass="invitationTableViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="邀影" id="Tzd-ID-M8T">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="qh3-8e-GLm">
+                <viewController id="YDa-mS-991" customClass="invitationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LHP-MM-VCc"/>
+                        <viewControllerLayoutGuide type="bottom" id="muI-Ey-VMZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0PC-iR-zmS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GnE-ai-uqb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YDa-mS-991" id="PIj-Ne-QpI"/>
+                                    <outlet property="delegate" destination="YDa-mS-991" id="9GV-r4-JLW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GnE-ai-uqb" secondAttribute="bottom" id="R8r-dc-30y"/>
+                            <constraint firstItem="GnE-ai-uqb" firstAttribute="leading" secondItem="0PC-iR-zmS" secondAttribute="leading" id="Soq-DV-ggU"/>
+                            <constraint firstAttribute="trailing" secondItem="GnE-ai-uqb" secondAttribute="trailing" id="jSw-SW-NTt"/>
+                            <constraint firstItem="GnE-ai-uqb" firstAttribute="top" secondItem="0PC-iR-zmS" secondAttribute="top" id="jbx-6Y-AXY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="邀影" id="waS-1b-RgM">
+                        <barButtonItem key="rightBarButtonItem" title="发邀影" id="Qp2-qG-8UB">
                             <connections>
-                                <segue destination="mA8-6O-DvN" kind="show" id="jND-qn-87x"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="发邀约" id="umL-K1-AKa">
-                            <connections>
-                                <segue destination="J5h-gO-2jJ" kind="show" id="6wn-nY-Ycs"/>
+                                <segue destination="J5h-gO-2jJ" kind="show" id="Gua-ZZ-pRd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tf-LA-B8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="GnE-ai-uqb" id="64e-LH-0Sp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Slj-zh-tIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="463"/>
+            <point key="canvasLocation" x="776" y="396"/>
         </scene>
         <!--发邀约-->
         <scene sceneID="PTq-e9-ato">
@@ -432,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ae7-kh-Vd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="463"/>
+            <point key="canvasLocation" x="1694" y="463"/>
         </scene>
         <!--Ins View Controller-->
         <scene sceneID="bS5-Dh-Pcw">
@@ -548,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPQ-DE-t9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2433" y="479"/>
+            <point key="canvasLocation" x="2965" y="479"/>
         </scene>
         <!--我的-->
         <scene sceneID="kfP-n7-Akz">
@@ -728,7 +752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5U4-Rf-CMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="479"/>
+            <point key="canvasLocation" x="2162" y="479"/>
         </scene>
         <!--影院-->
         <scene sceneID="mkO-Zd-OjE">
@@ -848,7 +872,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6x-g6-jrD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2794" y="479"/>
+            <point key="canvasLocation" x="3326" y="479"/>
         </scene>
         <!--注册    -->
         <scene sceneID="zTZ-xJ-jPX">
@@ -1265,7 +1289,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2015" y="452"/>
+            <point key="canvasLocation" x="2547" y="452"/>
         </scene>
     </scenes>
     <resources>

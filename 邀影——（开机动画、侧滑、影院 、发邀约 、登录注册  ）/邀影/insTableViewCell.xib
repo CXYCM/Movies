@@ -17,13 +17,13 @@
                         <rect key="frame" x="8" y="8" width="74" height="74"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="电影名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSR-0M-ewM">
-                        <rect key="frame" x="8" y="115" width="51" height="21"/>
+                        <rect key="frame" x="8" y="115" width="74" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="用户名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18l-IT-xxw">
-                        <rect key="frame" x="8" y="90" width="51" height="21"/>
+                        <rect key="frame" x="8" y="90" width="74" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -53,12 +53,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZA-Le-RKT">
-                        <rect key="frame" x="91" y="61" width="34" height="21"/>
+                        <rect key="frame" x="91" y="61" width="229" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="date" destination="gZA-Le-RKT" id="3qd-aI-pEX"/>
@@ -67,7 +68,7 @@
                 <outlet property="photo" destination="Kb8-6K-UIt" id="w7F-EE-vag"/>
                 <outlet property="place" destination="0by-F4-cgk" id="pk4-8e-ZpA"/>
                 <outlet property="say" destination="cfv-y2-qSo" id="jtf-kx-9qW"/>
-                <outlet property="username" destination="HSR-0M-ewM" id="hSx-Wc-Lld"/>
+                <outlet property="username" destination="18l-IT-xxw" id="uau-Lu-27E"/>
                 <outlet property="way" destination="JLJ-Go-9eE" id="tkn-7y-Xbg"/>
             </connections>
             <point key="canvasLocation" x="495" y="409.5"/>
