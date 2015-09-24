@@ -209,7 +209,7 @@
         [aiv stopAnimating];
         if (succeeded) {//成功
             //结合线程去触发 通过refreshMine触发通知自己刷新列表
-            [[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject:[NSNotification notificationWithName:@"refreshMine" object:self] waitUntilDone:YES];
+            [[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject:[NSNotification notificationWithName:@"refreshyaoqing" object:self] waitUntilDone:YES];
             //返回上一页面
             [self.navigationController popViewControllerAnimated:YES];
         } else {

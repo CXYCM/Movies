@@ -47,16 +47,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)delete:(UIButton *)sender forEvent:(UIEvent *)event {
+    //提示框
+    NSString *msg = [[NSString alloc]initWithFormat:@"确认删除？"];
+    UIAlertView *confirmView = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [confirmView show];
+
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        
+    }
+    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    [self.Booking deleteInBackgroundWithBlock:^(BOOL succ,NSError *error){
+        [aiv stopAnimating];
+        if (succ) {
+            [Utilities popUpAlertViewWithMsg:@"删除成功" andTitle:nil];
+            [[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject:[NSNotification notificationWithName:@"refreshMine" object:self] waitUntilDone:YES];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        
+    }];}
 @end

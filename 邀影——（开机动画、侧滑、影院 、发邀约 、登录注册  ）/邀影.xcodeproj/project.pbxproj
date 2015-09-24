@@ -516,6 +516,8 @@
 		5AAEE7B81BAD2159007B52E3 /* invitation */ = {
 			isa = PBXGroup;
 			children = (
+				1A45BAEA1BB2B36A002573BF /* yaoyingViewController.h */,
+				1A45BAEB1BB2B36A002573BF /* yaoyingViewController.m */,
 				1A45BAD71BB2A58A002573BF /* insTableViewCell.h */,
 				1A45BAD81BB2A58A002573BF /* insTableViewCell.m */,
 				1A45BAD91BB2A58A002573BF /* insTableViewCell.xib */,
@@ -525,8 +527,6 @@
 				1A45BACD1BB2738E002573BF /* MYViewController.m */,
 				1A45BADC1BB2A902002573BF /* insViewController.h */,
 				1A45BADD1BB2A902002573BF /* insViewController.m */,
-				1A45BAEA1BB2B36A002573BF /* yaoyingViewController.h */,
-				1A45BAEB1BB2B36A002573BF /* yaoyingViewController.m */,
 			);
 			name = "\binvitation";
 			sourceTree = "<group>";

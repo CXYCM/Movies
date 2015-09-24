@@ -25,6 +25,7 @@
     //去除多余下划线
     _tableView.tableFooterView = [[UIView alloc]init];
     [self requestData];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestData) name:@"refreshMine" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
