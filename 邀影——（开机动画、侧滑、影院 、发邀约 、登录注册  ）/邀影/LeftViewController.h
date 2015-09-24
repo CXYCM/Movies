@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftViewController : UIViewController
+@interface LeftViewController : UIViewController<UIActionSheetDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *objectsForShow;
+
 
 @end

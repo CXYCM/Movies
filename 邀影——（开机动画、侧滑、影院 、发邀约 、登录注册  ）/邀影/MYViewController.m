@@ -18,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //添加导航条按钮
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(back)];
+    self.navigationItem.leftBarButtonItem = doneButton;
     //获得当前用户
     PFUser *currentUser =[PFUser currentUser];
     //获得当前用户名
@@ -31,6 +34,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+//返回上一页
+-(void)back{
+    [self dismissViewControllerAnimated:self completion:nil];
 }
 
 /*
