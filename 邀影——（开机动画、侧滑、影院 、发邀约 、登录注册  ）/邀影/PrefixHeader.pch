@@ -16,4 +16,6 @@
 #import "storageMgr.h"
 #import "Constants.h"
 #import "ECSlidingViewController.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #endif
