@@ -162,7 +162,7 @@
     NSString *movies=_movieButton.titleLabel.text;
     NSString *places = _placeButton.titleLabel.text;
     NSDate *date = _date.date;
-    
+   
     if ([ways isEqualToString:@""]) {
         [Utilities popUpAlertViewWithMsg:@"请填写邀请方式" andTitle:nil];
         return;
@@ -174,11 +174,11 @@
         [Utilities popUpAlertViewWithMsg:@"请填写对小伙伴说的话" andTitle:nil];
         return;
     }
-    if ([movies isEqualToString:@""]) {
+    if ([movies isEqualToString:@"选择电影 >"]) {
         [Utilities popUpAlertViewWithMsg:@"请选择电影" andTitle:nil];
         return;
     }
-    if ([places isEqualToString:@""]) {
+    if ([places isEqualToString:@"选择地点 >"]) {
         [Utilities popUpAlertViewWithMsg:@"请选择地点" andTitle:nil];
         return;
     }
@@ -196,10 +196,8 @@
     item[@"place"] = places;
     item[@"movie"] = movies;
     item[@"date"] =date;
-    
-    //设置关联  获得用户实例
-    PFUser *currentUser = [PFUser currentUser];
-    item[@"User"] = currentUser;
+    item[@"object"] = @NO;
+
     
     //设置菊花
     UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
