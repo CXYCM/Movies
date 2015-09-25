@@ -174,11 +174,11 @@
         [Utilities popUpAlertViewWithMsg:@"请填写对小伙伴说的话" andTitle:nil];
         return;
     }
-    if ([movies isEqualToString:@""]) {
+    if ([movies isEqualToString:@"选择电影 >"]) {
         [Utilities popUpAlertViewWithMsg:@"请选择电影" andTitle:nil];
         return;
     }
-    if ([places isEqualToString:@""]) {
+    if ([places isEqualToString:@"选择地点 >"]) {
         [Utilities popUpAlertViewWithMsg:@"请选择地点" andTitle:nil];
         return;
     }
@@ -197,9 +197,7 @@
     item[@"movie"] = movies;
     item[@"date"] =date;
     item[@"object"] = @NO;
-    //设置关联  获得用户实例
-    PFUser *currentUser = [PFUser currentUser];
-    item[@"User"] = currentUser;
+
     
     //设置菊花
     UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
