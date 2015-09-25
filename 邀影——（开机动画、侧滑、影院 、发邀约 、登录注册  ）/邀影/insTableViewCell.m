@@ -20,4 +20,10 @@
     // Configure the view for the selected state
 }
 
+
+- (IBAction)AppAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    if (_delegate && [_delegate respondsToSelector:@selector(applyPressed:)]) {
+        [_delegate applyPressed:_indexPath];
+    }
+}
 @end

@@ -162,7 +162,7 @@
     NSString *movies=_movieButton.titleLabel.text;
     NSString *places = _placeButton.titleLabel.text;
     NSDate *date = _date.date;
-    
+   
     if ([ways isEqualToString:@""]) {
         [Utilities popUpAlertViewWithMsg:@"请填写邀请方式" andTitle:nil];
         return;
@@ -196,7 +196,7 @@
     item[@"place"] = places;
     item[@"movie"] = movies;
     item[@"date"] =date;
-    
+    item[@"object"] = @NO;
     //设置关联  获得用户实例
     PFUser *currentUser = [PFUser currentUser];
     item[@"User"] = currentUser;

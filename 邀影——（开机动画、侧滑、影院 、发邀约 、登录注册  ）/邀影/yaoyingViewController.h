@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface yaoyingViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "insTableViewCell.h"
+@interface yaoyingViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,insTableViewCellDelegate,UIActionSheetDelegate>{
+     NSIndexPath *ip;
+}
 @property(strong,nonatomic)NSArray*objectsForShow;
 
+;
 @end

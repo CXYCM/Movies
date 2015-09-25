@@ -38,7 +38,6 @@
 }
 
 
-
 - (void)requestData {
     
     //得到当前用户
@@ -63,20 +62,41 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  
+    
     static NSString *identifier = @"Cell";
     insTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    //底边下划线撑满整个屏幕的宽度
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"insTableViewCell" owner:self options:nil] lastObject];
     }
-    
+    cell.delegate = self;
+    cell.indexPath = indexPath;
     PFObject *object = _objectsForShow[indexPath.row];
+  //  appObject *objects = _objectsForShow[indexPath.row];
     cell.movie.text=object[@"movie"];
     cell.place.text=[NSString stringWithFormat:@"地点：%@",object[@"place"]];
     cell.say.text=[NSString stringWithFormat:@"对小伙伴说：%@",object[@"say"]];
     cell.username.text=[NSString stringWithFormat:@"%@",object[@"username"]];
     cell.way.text=[NSString stringWithFormat:@"方式%@",object[@"way"]];
-    //cell.date.text = [NSString stringWithFormat:@"%@",object[@"date"]];
     cell.number.text = [NSString stringWithFormat:@"%@",object[@"number"]];
+    
+    if ([object[@"object"] integerValue] == 1) {
+        [cell.App setTitle:@"取消" forState:UIControlStateNormal];
+    } else {
+        [cell.App setTitle:@"邀约" forState:UIControlStateNormal];
+    }
     NSDateFormatter*formatter=[[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSString*dateString=[formatter stringFromDate:object[@"date"]];
@@ -98,5 +118,33 @@
     return 145;
 }
 
+- (void)applyPressed:(NSIndexPath *)indexPath {
+    ip = indexPath;
+    PFObject *object = [_objectsForShow objectAtIndex:ip.row];
+    NSLog(@"%@", object[@"object"]);
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示"
+         message: [object[@"object"] integerValue] == 1 ? @"是否确认取消应邀？" : @"是否确认应邀？"
+                                                       delegate:self
+                                              cancelButtonTitle:@"取消"
+                                              otherButtonTitles:@"确认", nil];
+    [alertView show];
+}
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        PFObject *object = [_objectsForShow objectAtIndex:ip.row];
+        if ([object[@"object"] integerValue] == 1) {
+            object[@"object"] = @NO;
+        } else {
+            object[@"object"] = @YES;
+        }
+        [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {//成功
+                [self.tableView reloadRowsAtIndexPaths:@[ip] withRowAnimation:UITableViewRowAnimationFade];
+            } else {
+                [Utilities popUpAlertViewWithMsg:nil andTitle:nil];
+            }
+        }];
+    }
+}
 @end
