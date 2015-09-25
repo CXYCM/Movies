@@ -29,6 +29,7 @@
     _tableView.tableFooterView = [[UIView alloc]init];
     [self requestData];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestData) name:@"refreshMine" object:nil];
+  
 }
 
 - (void)didReceiveMemoryWarning {
