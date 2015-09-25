@@ -13,11 +13,52 @@
 @end
 
 @implementation LeftViewController
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [self resetPage];
+}
+
+- (void)resetPage {
+    //   获取当前用户的实例
+    PFUser *user = [PFUser currentUser];
+    if (user) {
+        NSLog(@"in123");
+        
+        [self LoginData];
+        _btn1.enabled=YES;
+        _btn2.enabled=NO;
+        _btn3.enabled=YES;
+    }else{
+        
+        [self pToLogin];
+        //        按钮能点击
+        _btn2.enabled=YES;
+        _btn1.enabled=NO;
+        _btn3.enabled=NO;
+    }
+}
+
+- (IBAction)loginOUT:(id)sender {
+    
+    [PFUser logOut];
+    [self resetPage];
+    //[self dismissViewControllerAnimated:YES completion:nil];//退出
+}
+
+- (void)LoginData{
+    PFUser *user = [PFUser currentUser];
+    _YHname.text = user.username;
+    [_btn3 setTitle:@"退出登录"forState:UIControlStateNormal];
+}
+- (void)pToLogin{
+    _YHname.text = @"请登录";
+    [_btn3 setTitle:@""forState:UIControlStateNormal];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _objectsForShow = [[NSMutableArray alloc] initWithObjects:@"我的", @"清除缓存", @"反馈评价", @"检查更新", @"关于", nil];
+    _objectsForShow = [[NSMutableArray alloc] initWithObjects:@"我的邀约", @"清除缓存", @"反馈评价", @"检查更新", @"关于", nil];
     //去除多余下划线
     _tableView.tableFooterView = [[UIView alloc]init];
 }

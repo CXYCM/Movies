@@ -11,6 +11,10 @@
 @interface LeftViewController : UIViewController<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *objectsForShow;
+@property (weak, nonatomic) IBOutlet UILabel *YHname;
 
+@property (weak, nonatomic) IBOutlet UIButton *btn1;
+@property (weak, nonatomic) IBOutlet UIButton *btn2;
+@property (weak, nonatomic) IBOutlet UIButton *btn3;
 
 @end

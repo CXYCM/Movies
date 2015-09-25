@@ -161,6 +161,7 @@
 }
 
 - (IBAction)loginAction:(UIButton *)sender forEvent:(UIEvent *)event {
+
     NSString *username = _usernameTF.text;
     NSString *password = _passwordTF.text;
     
@@ -176,8 +177,9 @@
             [Utilities setUserDefaults:@"userName" content:username];
             //     _usernameTF.text = @"";
             _passwordTF.text = @"";
-            [self popUpHomePage];
-            
+            //[self popUpHomePage];
+     //返回上一页 （跳转）
+            [self dismissViewControllerAnimated:YES completion:nil];
         } else if (error.code == 101) {
             [Utilities popUpAlertViewWithMsg:@"用户名或密码错误" andTitle:nil];
         } else if (error.code == 100) {
@@ -186,7 +188,7 @@
             [Utilities popUpAlertViewWithMsg:nil andTitle:nil];
         }
     }];
-    
+ 
 
 }
 
