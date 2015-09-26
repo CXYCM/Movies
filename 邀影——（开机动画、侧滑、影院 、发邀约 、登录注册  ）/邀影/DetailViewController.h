@@ -20,6 +20,6 @@
 
 @property (strong, nonatomic) PFObject *item;
 
-@property (copy,nonatomic) NSString *userName;
+@property (copy,nonatomic) NSString *userComment;
 
 @end

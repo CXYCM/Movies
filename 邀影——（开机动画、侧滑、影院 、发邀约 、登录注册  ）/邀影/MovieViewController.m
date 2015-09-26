@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 罗凌云. All rights reserved.
 //
 #define MJImageCount 5
-#define MJInterval
+//#define MJInterval
 #import "MovieViewController.h"
 #import "DetailViewController.h"
 
@@ -52,11 +52,12 @@
     self.scrollView.pagingEnabled = YES;
     //self.scrollView.delegate = self;
     //5.设置pageControl的总页数
-    self.pageControl.numberOfPages = 2;
+    self.pageControl.numberOfPages = MJImageCount;
     
 }
 -(void)imageArray:(NSArray *)array
 {
+    
     __weak typeof(self) weakSelf = self;
     
     self.scrollView.contentSize=CGSizeMake(weakSelf.scrollView.frame.size.width*array.count,0);
@@ -83,7 +84,7 @@
 
 -(void)addTimer
 {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
 }
 -(void)removeTimer
 {
@@ -94,7 +95,7 @@
 {
     //增加pagecontrol的页码
     
-    if (self.pageControl.currentPage == 2 - 1) {
+    if (self.pageControl.currentPage == MJImageCount - 1) {
         self.pageControl.currentPage = 0;
     }else{
         self.pageControl.currentPage ++;

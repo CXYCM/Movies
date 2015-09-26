@@ -125,13 +125,31 @@
 */
 
 - (IBAction)comment:(id)sender {
-    self.userName = self.textField.text;
-    NSString *nameString = self.userName;
-    if ([nameString length] == 0) {
-        nameString = @"comment";
+    self.userComment = self.textField.text;
+    NSString *commentString = self.userComment   ;
+    if ([commentString length] == 0) {
+        commentString = @"comment";
     }
-    NSString *comment = [[NSString alloc]initWithFormat:@"%@",nameString];
+    NSString *comment = [[NSString alloc]initWithFormat:@"%@",commentString];
     self.label.text = comment;
+    PFObject *items = [PFObject objectWithClassName:@"Movie"];
+    items[@"review"] =commentString;
+    
+    //设置菊花
+    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    
+    //保存
+    [items saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [aiv stopAnimating];
+        if (succeeded) {//成功
+            //结合线程去触发 通过refreshMine触发通知自己刷新列表
+            [[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject:[NSNotification notificationWithName:nil object:self] waitUntilDone:YES];
+            //返回上一页面
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            [Utilities popUpAlertViewWithMsg:nil andTitle:nil];
+        }
+    }];
 
 }
 @end
