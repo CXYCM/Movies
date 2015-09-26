@@ -7,8 +7,10 @@
 //
 
 #import "sendViewController.h"
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+@interface sendViewController ()<RFSegmentViewDelegate>
 
-@interface sendViewController ()
 
 - (IBAction)timeNo:(UIBarButtonItem *)sender;
 - (IBAction)timeYes:(UIBarButtonItem *)sender;
@@ -38,49 +40,37 @@
     _nowArr = [NSArray array];
     self.movieArr = arr;
     self.placeArr = arrr;
-//    [arr release];
-//    [arrr release];
+
+    _segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(kScreenWidth/2, 60,kScreenWidth/2 , 60) items:@[@"男生",@"女生",@"不限"]];
+    _segmentView.tintColor = [self getRandomColor];
+    _segmentView.delegate = self;
+    [self.view addSubview:_segmentView];
+    
+    _segmentViews = [[RFSegmentView alloc] initWithFrame:CGRectMake(kScreenWidth/2, 110,kScreenWidth/2 , 60) items:@[@"AA制",@"你请客",@"我请客"]];
+    _segmentViews.tintColor = [self getRandomColor];
+    _segmentViews.delegate = self;
+    [self.view addSubview:_segmentViews];
+
 
 }
+- (UIColor *)getRandomColor
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+{
+    UIColor *color = [UIColor grayColor ];
+    return color;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)segmentViewSelectIndex:(NSInteger)index
+{
+    if (_segmentView) {
+        gender = index;
+    }else if (_segmentViews) {
+        genders = index;
+    }
+    
+    
 }
-*/
 
-//- (void)dealloc {
-//    [_date release];
-//    [_tansView release];
-//    [_classTB release];
-//    [_timeButton release];
-//    
-//    [_movieTB release];
-//    [_movieButton release];
-//    [_movie release];
-//    [_movieView release];
-//    
-//    [_place release];
-//    [_placeView release];
-//    [_placeTB release];
-//    [_placeButton release];
-//    
-//    
-//    [_say release];
-//    [_way release];
-//    [_numberTF release];
-//    [_ins release];
-//    [super dealloc];
-//}
 //------------时间
 
 - (IBAction)timeNo:(UIBarButtonItem *)sender {
@@ -154,19 +144,49 @@
 //------------数据库上传
 
 - (IBAction)goAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    
+    NSString *ins = @"男生";
+    switch (gender) {
+        case 0: {
+            ins = @"男生";
+        }
+            break;
+        case 1: {
+            ins = @"女生";
+        }
+            break;
+        case 2: {
+            ins = @"不限";
+        }
+            break;
+        default:
+            break;
+    }
+    NSString *way = @"AA制";
+    switch (genders) {
+        case 0: {
+            way = @"AA制";
+        }
+            break;
+        case 1: {
+            way = @"你请客";
+        }
+            break;
+        case 2: {
+            way = @"我请客";
+        }
+            break;
+        default:
+            break;
+    }
+
     //手动输入的东西
-    NSString *invitation = _ins.text;
-    NSString *ways = _way.text;
     NSString *numbers = _numberTF.text;
     NSString *describe = _say.text;
     NSString *movies=_movieButton.titleLabel.text;
     NSString *places = _placeButton.titleLabel.text;
     NSDate *date = _date.date;
    
-    if ([ways isEqualToString:@""]) {
-        [Utilities popUpAlertViewWithMsg:@"请填写邀请方式" andTitle:nil];
-        return;
-    }
     if ([numbers isEqualToString:@""]) {
         [Utilities popUpAlertViewWithMsg:@"请填写人数" andTitle:nil];
         return;
@@ -182,15 +202,12 @@
         [Utilities popUpAlertViewWithMsg:@"请选择地点" andTitle:nil];
         return;
     }
-    if ([invitation isEqualToString:@""]) {
-        [Utilities popUpAlertViewWithMsg:@"请选择邀请性别" andTitle:nil];
-        return;
-    }
+    
 
     //创建item 基本信息
     PFObject *item = [PFObject objectWithClassName:@"invitation"];
-    item[@"ins"] = invitation;
-    item[@"way"] = ways;
+    item[@"ins"] = ins;
+    item[@"way"] = way;
     item[@"number"] = numbers;
     item[@"say"] = describe;
     item[@"place"] = places;

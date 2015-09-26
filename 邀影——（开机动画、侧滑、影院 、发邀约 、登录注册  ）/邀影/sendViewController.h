@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RFSegmentView.h"
+@interface sendViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>{
+    NSInteger gender;
+    NSInteger genders;
+}
 
-@interface sendViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 //时间
 @property (retain, nonatomic) IBOutlet UIView *tansView;
 @property (retain, nonatomic) IBOutlet UIDatePicker *date;
@@ -33,10 +37,10 @@
 @property(strong,nonatomic)NSArray * nowArr;
 //数据库
 @property (retain, nonatomic) IBOutlet UITextView *say;
-@property (retain, nonatomic) IBOutlet UITextField *way;
 @property (retain, nonatomic) IBOutlet UITextField *numberTF;
-@property (retain, nonatomic) IBOutlet UITextField *ins;
 
 
+@property (strong, nonatomic) RFSegmentView *segmentView;
+@property (strong, nonatomic) RFSegmentView *segmentViews;
 
 @end

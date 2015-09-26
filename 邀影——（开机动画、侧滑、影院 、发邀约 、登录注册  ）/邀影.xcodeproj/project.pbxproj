@@ -93,6 +93,7 @@
 		1AE7593F1BB3D2DD000848FF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7593E1BB3D2DD000848FF /* DetailViewController.m */; };
 		1AE759411BB3D78A000848FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE759401BB3D78A000848FF /* Foundation.framework */; };
 		1AE759431BB3D79A000848FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE759421BB3D79A000848FF /* UIKit.framework */; };
+		5A32A8B91BB61F3100478DA5 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32A8B81BB61F3100478DA5 /* RFSegmentView.m */; };
 		5A5BBA141BAFDB34009028DB /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BBA131BAFDB34009028DB /* loginViewController.m */; };
 		5A5BBA171BAFDB4E009028DB /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BBA161BAFDB4E009028DB /* registerViewController.m */; };
 		5A5BBA1A1BAFDB6F009028DB /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5BBA191BAFDB6F009028DB /* MainTabViewController.m */; };
@@ -230,6 +231,8 @@
 		1AE7593E1BB3D2DD000848FF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		1AE759401BB3D78A000848FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AE759421BB3D79A000848FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5A32A8B71BB61F3100478DA5 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
+		5A32A8B81BB61F3100478DA5 /* RFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegmentView.m; sourceTree = "<group>"; };
 		5A5BBA121BAFDB34009028DB /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		5A5BBA131BAFDB34009028DB /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		5A5BBA151BAFDB4E009028DB /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registerViewController.h; sourceTree = "<group>"; };
@@ -500,6 +503,8 @@
 		5A9F56FF1BAC0C5B0034A81F /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				5A32A8B71BB61F3100478DA5 /* RFSegmentView.h */,
+				5A32A8B81BB61F3100478DA5 /* RFSegmentView.m */,
 				5A8DE8541BAE76AA0022C27D /* ECSlidingViewController */,
 			);
 			name = 3rd;
@@ -864,6 +869,7 @@
 				1A45BAEC1BB2B36A002573BF /* yaoyingViewController.m in Sources */,
 				1A45BADE1BB2A902002573BF /* insViewController.m in Sources */,
 				1AE7593F1BB3D2DD000848FF /* DetailViewController.m in Sources */,
+				5A32A8B91BB61F3100478DA5 /* RFSegmentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
