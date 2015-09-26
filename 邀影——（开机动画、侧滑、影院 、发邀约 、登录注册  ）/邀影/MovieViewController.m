@@ -20,30 +20,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self requestData];
-    CGFloat imageW = self.scrollView.frame.size.width;
-    CGFloat imageH = self.scrollView.frame.size.height;
-    CGFloat imageY = 0;
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [self removeTimer];
+    [self shuff];
+}
+-(void)shuff{
+    
+    //使用__weak性质的self替代self(typeof(self) 是获取到self的类型)
+    __weak typeof(self) weakSelf = self;
+    PFQuery *query = [PFQuery queryWithClassName:@"shuffing"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *returnedObjects, NSError *error) {
+        if (!error) {
+            [weakSelf imageArray:returnedObjects];
+            //            //6.添加定时器
+            //            [weakSelf addTimer];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
     
     
-    //1.添加五张图片到scrollview中
-    for (int i =0; i<MJImageCount; i++ ) {
-        UIImageView *imageView = [[UIImageView alloc] init];
-        
-        //设置frame
-        CGFloat imageX = i * imageW;
-        imageView.frame = CGRectMake(imageX,imageY,imageW,imageH);
-        
-        //设置图片
-        NSString *name = [NSString stringWithFormat:@"img_0%d",i + 1];
-        imageView.image = [UIImage imageNamed:name];
-        
-        [self.scrollView addSubview:imageView];
-        
-    }
     
-    //2.设置内容尺寸
-    CGFloat contentW  = MJImageCount * imageW;
-    self.scrollView.contentSize =CGSizeMake(contentW,0);
+    _scrollView.backgroundColor=[UIColor whiteColor];
     
     //3.隐藏水平滚动条
     self.scrollView.showsHorizontalScrollIndicator   = NO;
@@ -51,12 +52,35 @@
     self.scrollView.pagingEnabled = YES;
     //self.scrollView.delegate = self;
     //5.设置pageControl的总页数
-    self.pageControl.numberOfPages = MJImageCount;
-    //6.添加定时器
-    [self addTimer];
-    
+    self.pageControl.numberOfPages = 2;
     
 }
+-(void)imageArray:(NSArray *)array
+{
+    __weak typeof(self) weakSelf = self;
+    
+    self.scrollView.contentSize=CGSizeMake(weakSelf.scrollView.frame.size.width*array.count,0);
+    for (int i=0;i<array.count;i++) {
+        PFObject * fobject = array[i];
+        PFFile *pfile=fobject[@"picture"];
+        [pfile getDataInBackgroundWithBlock:^(NSData *pictureData, NSError *error) {
+            if (!error) {
+                //CGFloat imageW = weakSelf.scrollView.frame.size.width;
+                CGFloat imageH = weakSelf.scrollView.frame.size.height;
+                UIImageView *iView=[[UIImageView alloc]initWithFrame:CGRectMake(UI_SCREEN_W*i ,0, UI_SCREEN_W, imageH)];
+                [weakSelf.scrollView addSubview:iView];
+                //                        UIImage *image = [UIImage imageWithData:pictureData];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    iView.image = [UIImage imageWithData:pictureData];;
+                });
+            }
+        }];
+    }
+    //6.添加定时器
+    [weakSelf addTimer];
+    
+}
+
 -(void)addTimer
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
@@ -70,7 +94,7 @@
 {
     //增加pagecontrol的页码
     
-    if (self.pageControl.currentPage == MJImageCount - 1) {
+    if (self.pageControl.currentPage == 2 - 1) {
         self.pageControl.currentPage = 0;
     }else{
         self.pageControl.currentPage ++;
@@ -89,6 +113,10 @@
     int page = (scrollView.contentOffset.x + scrollW * 0.5) / scrollW;
     self.pageControl.currentPage = page;
     
+    
+    CGPoint offset = CGPointMake(page*scrollW , 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+
 }
 //开始拖拽时调用
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
