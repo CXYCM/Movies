@@ -10,6 +10,7 @@
 @protocol insTableViewCellDelegate;
 @interface insTableViewCell : UITableViewCell
 @property (weak, nonatomic) id<insTableViewCellDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *ins;
 @property (strong, nonatomic) NSIndexPath *indexPath;
 @property (weak, nonatomic) IBOutlet UIImageView *photo;
 @property (weak, nonatomic) IBOutlet UILabel *way;

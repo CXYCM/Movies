@@ -81,17 +81,18 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"insTableViewCell" owner:self options:nil] lastObject];
     }
+    PFUser *currentUser =[PFUser currentUser];
+    //获得当前用户名
+    cell.username.text=currentUser.username;
     cell.delegate = self;
     cell.indexPath = indexPath;
     PFObject *object = _objectsForShow[indexPath.row];
-  //  appObject *objects = _objectsForShow[indexPath.row];
     cell.movie.text=object[@"movie"];
     cell.place.text=[NSString stringWithFormat:@"地点：%@",object[@"place"]];
     cell.say.text=[NSString stringWithFormat:@"对小伙伴说：%@",object[@"say"]];
-    cell.username.text=[NSString stringWithFormat:@"%@",object[@"username"]];
     cell.way.text=[NSString stringWithFormat:@"方式%@",object[@"way"]];
-    cell.number.text = [NSString stringWithFormat:@"%@",object[@"number"]];
-    
+    cell.number.text = [NSString stringWithFormat:@"邀请%@人",object[@"number"]];
+    cell.ins.text = [NSString stringWithFormat:@"邀请%@",object[@"ins"]];
     if ([object[@"object"] integerValue] == 1) {
         [cell.App setTitle:@"取消" forState:UIControlStateNormal];
     } else {
@@ -115,7 +116,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 145;
+    return 180;
 }
 
 - (void)applyPressed:(NSIndexPath *)indexPath {
