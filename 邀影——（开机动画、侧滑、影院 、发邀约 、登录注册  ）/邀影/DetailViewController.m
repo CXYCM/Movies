@@ -128,12 +128,19 @@
     self.userComment = self.textField.text;
     NSString *commentString = self.userComment   ;
     if ([commentString length] == 0) {
-        commentString = @"comment";
+        //commentString = @"";
+        //弹窗
+        UIAlertView *reView = [[UIAlertView alloc]initWithTitle:nil message:@"请填写评论" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        //弹窗风格  （普通）
+        //[qcView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+        [reView show];
     }
-    NSString *comment = [[NSString alloc]initWithFormat:@"%@",commentString];
+    NSString *comment = [[NSString alloc]initWithFormat:@"我的评论：%@",commentString];
     self.label.text = comment;
+    self.textField.text = @"";
+    self.textField.placeholder = @"";
     PFObject *items = [PFObject objectWithClassName:@"Movie"];
-    items[@"review"] =commentString;
+    items[@"userreview"] =commentString;
     
     //设置菊花
     UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
@@ -150,6 +157,7 @@
             [Utilities popUpAlertViewWithMsg:nil andTitle:nil];
         }
     }];
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
 
 }
 @end
