@@ -106,7 +106,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = 70;
-    _tableView.backgroundColor = [UIColor blackColor];
+    _tableView.backgroundColor = [UIColor whiteColor];
     _tableView.separatorColor = [UIColor darkGrayColor];
     [self.view addSubview:_tableView];
 }

@@ -18,13 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    BootAnimayionView *bootView = [[BootAnimayionView alloc]init];
-//    [self.view addSubview:bootView];
+    BootAnimayionView *bootView = [[BootAnimayionView alloc]init];
+    [self.view addSubview:bootView];
     
     
-   // NSString *bgImg = @"nav_bg_all.png";
-    //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:bgImg] forBarMetrics:UIBarMetricsDefault];
-    
+//    NSString *bgImg = @"nav_bg_all.png";
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:bgImg] forBarMetrics:UIBarMetricsDefault];
+//    
     
 
 }

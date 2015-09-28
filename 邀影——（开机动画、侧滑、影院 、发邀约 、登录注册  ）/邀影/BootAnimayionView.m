@@ -135,16 +135,7 @@
 //普通的开机动画
 - (void)_defautAnimationView
 {
-    //设置背景图片（判断屏幕尺寸是否是48来判断使用那张图片）
-    //    NSString *bgImageName = kScreenHeight == 480 ? @"Default-568h.jpg": @"Default.jpg" ;
-    
-    NSString *bgImageName =  @"6608733_200227329000_2.jpg";
-    
-    UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    bgImageView.image = [UIImage imageNamed:bgImageName];
-    [self addSubview:bgImageView];
-    
-    
+    self.backgroundColor = [UIColor whiteColor];
     //创建开机动画的小视图
     //图片的宽度
     float imageWidth = kScreenWidth/4;
