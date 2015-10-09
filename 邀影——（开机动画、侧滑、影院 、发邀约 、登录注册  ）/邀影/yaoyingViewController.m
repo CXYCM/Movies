@@ -41,8 +41,9 @@
 - (void)requestData {
     
     //得到当前用户
+    PFUser *currentUser = [PFUser currentUser];
     PFQuery *query = [PFQuery queryWithClassName:@"invitation"];
-    //Booking表中User 字段筛选当前用户
+    [query whereKey:@"User" notEqualTo:currentUser];
     [query includeKey:@"User"];
     //升序排序
     [query orderByAscending:@"date"];

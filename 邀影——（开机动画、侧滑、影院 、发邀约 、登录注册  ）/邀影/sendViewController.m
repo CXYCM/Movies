@@ -117,7 +117,8 @@
     _movieView.hidden=YES;
     NSInteger row = [_movie selectedRowInComponent:0];
     //得到目前选中这行文字
-    NSString *titles = [_nowArr objectAtIndex:row];
+    PFObject *obj = [_movieArr objectAtIndex:row];
+    NSString *titles = obj[@"name"];
     //文字赋值到button上去   在normal状态下显示这段文字
     [_movieButton setTitle:titles forState:UIControlStateNormal];
 }
