@@ -22,9 +22,9 @@
     [self.view addSubview:bootView];
     
     
-//    NSString *bgImg = @"nav_bg_all.png";
-//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:bgImg] forBarMetrics:UIBarMetricsDefault];
-//    
+    NSString *bgImg = @"2222D.png";
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:bgImg] forBarMetrics:UIBarMetricsDefault];
+    
     
 
 }

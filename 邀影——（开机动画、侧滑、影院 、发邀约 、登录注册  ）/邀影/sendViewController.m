@@ -35,10 +35,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *arr = [[NSArray alloc] initWithObjects:@"双枪",@"金刚狼2",@"蓝精灵2",@"卑鄙的我2",@"长大成人2",@"极速蜗牛",@"赤焰战场2",@"环太平洋",@"迷途知返", nil];
+    PFQuery *query = [PFQuery queryWithClassName:@"Movie"];
+    
+    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *returnedObjects, NSError *error) {
+        [aiv stopAnimating];
+        if (!error) {
+            self.movieArr = returnedObjects;
+            NSLog(@"%@", _movieArr);
+            [_movie reloadAllComponents];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
+   // NSArray *arr = [[NSArray alloc] initWithObjects:@"双枪",@"金刚狼2",@"蓝精灵2",@"卑鄙的我2",@"长大成人2",@"极速蜗牛",@"赤焰战场2",@"环太平洋",@"迷途知返", nil];
     NSArray *arrr =[[NSArray alloc] initWithObjects:@"东城区",@"西城区",@"海淀区",@"朝阳区",@"崇文区",@"平谷区",@"燕郊开发区",@"密云县",@"延安县",nil];
     _nowArr = [NSArray array];
-    self.movieArr = arr;
     self.placeArr = arrr;
 
     _segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(kScreenWidth/2, 60,kScreenWidth/2 , 60) items:@[@"男生",@"女生",@"不限"]];
@@ -246,7 +259,12 @@
 //行
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
-    return _nowArr.count;
+    if (pickerView == _movie) {
+        return _movieArr.count;
+    } else {
+        return _placeArr.count;
+    }
+
     
 }
 
@@ -268,7 +286,12 @@
     return YES;
 }
 -(NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [_nowArr objectAtIndex:row];
+    if (pickerView == _movie) {
+        PFObject *movie = [_movieArr objectAtIndex:row];
+        return movie[@"name"];
+    } else {
+        return [_placeArr objectAtIndex:row];
+    }
 }
 
 

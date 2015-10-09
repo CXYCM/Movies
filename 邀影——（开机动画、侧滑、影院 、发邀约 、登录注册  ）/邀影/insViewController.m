@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     PFFile *photo = _obj[@"photo"];
     [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
         if (!error) {
@@ -58,16 +57,16 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
-        
+        UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+        [self.Booking deleteInBackgroundWithBlock:^(BOOL succ,NSError *error){
+            [aiv stopAnimating];
+            if (succ) {
+                [Utilities popUpAlertViewWithMsg:@"删除成功" andTitle:nil];
+                [[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject:[NSNotification notificationWithName:@"refreshMine" object:self] waitUntilDone:YES];
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+            
+        }];
     }
-    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
-    [self.Booking deleteInBackgroundWithBlock:^(BOOL succ,NSError *error){
-        [aiv stopAnimating];
-        if (succ) {
-            [Utilities popUpAlertViewWithMsg:@"删除成功" andTitle:nil];
-            [[NSNotificationCenter defaultCenter] performSelectorOnMainThread:@selector(postNotification:) withObject:[NSNotification notificationWithName:@"refreshMine" object:self] waitUntilDone:YES];
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-        
-    }];}
+   }
 @end

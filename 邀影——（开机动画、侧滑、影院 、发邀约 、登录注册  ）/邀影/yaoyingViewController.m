@@ -87,6 +87,7 @@
     cell.delegate = self;
     cell.indexPath = indexPath;
     PFObject *object = _objectsForShow[indexPath.row];
+    PFUser *user = object[@"User"];
     cell.movie.text=object[@"movie"];
     cell.place.text=[NSString stringWithFormat:@"地点：%@",object[@"place"]];
     cell.say.text=[NSString stringWithFormat:@"对小伙伴说：%@",object[@"say"]];
@@ -102,7 +103,7 @@
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSString*dateString=[formatter stringFromDate:object[@"date"]];
     cell.date.text=[NSString stringWithFormat:@"时间：%@",dateString];
-    PFFile *photo = object[@"photo"];
+    PFFile *photo = user[@"photo"];
     [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
         if (!error) {
             UIImage *image = [UIImage imageWithData:photoData];

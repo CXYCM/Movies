@@ -107,6 +107,7 @@
 		5A8DE8651BAE76B90022C27D /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DE85D1BAE76B90022C27D /* ECSlidingAnimationController.m */; };
 		5A8DE8661BAE76B90022C27D /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DE85F1BAE76B90022C27D /* ECSlidingInteractiveTransition.m */; };
 		5A8DE8671BAE76B90022C27D /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8DE8611BAE76B90022C27D /* UIViewController+ECSlidingViewController.m */; };
+		5AD961FE1BC7610D00E322A9 /* 2222D.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD961FD1BC7610D00E322A9 /* 2222D.png */; };
 		5AF6F5871BABE58F008E1A85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF6F5861BABE58F008E1A85 /* main.m */; };
 		5AF6F58A1BABE58F008E1A85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF6F5891BABE58F008E1A85 /* AppDelegate.m */; };
 		5AF6F5901BABE58F008E1A85 /* MainApp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF6F58E1BABE58F008E1A85 /* MainApp.storyboard */; };
@@ -257,6 +258,7 @@
 		5A8DE8601BAE76B90022C27D /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
 		5A8DE8611BAE76B90022C27D /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
 		5A8DE8691BAE76D30022C27D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5AD961FD1BC7610D00E322A9 /* 2222D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2222D.png; sourceTree = "<group>"; };
 		5AF6F5811BABE58F008E1A85 /* 邀影.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "邀影.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF6F5851BABE58F008E1A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AF6F5861BABE58F008E1A85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 		5AAEE7BB1BAD2205007B52E3 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				5AD961FD1BC7610D00E322A9 /* 2222D.png */,
 				1A21C68B1BB136A100053EC0 /* 启动页 */,
 				1A21C6741BB1367600053EC0 /* 开机动画 */,
 				1A21C6E01BB1398B00053EC0 /* BootAnimayionView.h */,
@@ -771,6 +774,7 @@
 				1A966EAD1BB23DAE00BA279E /* movie_cinema.png in Resources */,
 				1A21C6BD1BB1370400053EC0 /* 26@2x.png in Resources */,
 				1A21C6C71BB1370400053EC0 /* 5@2x.png in Resources */,
+				5AD961FE1BC7610D00E322A9 /* 2222D.png in Resources */,
 				1A21C6B21BB1370400053EC0 /* 16@2x.png in Resources */,
 				1A45BADB1BB2A58A002573BF /* insTableViewCell.xib in Resources */,
 				1A966EC01BB23E9A00BA279E /* district_list.json in Resources */,

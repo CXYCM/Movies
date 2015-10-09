@@ -64,7 +64,7 @@
     [self.contentView addSubview:_couponIcon];
     
     //影院标题
-    self.textLabel.textColor = [UIColor whiteColor];
+    self.textLabel.textColor = [UIColor redColor];
     self.textLabel.font = [UIFont systemFontOfSize:16];
     
     //子标题

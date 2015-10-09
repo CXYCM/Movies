@@ -11,6 +11,8 @@
 @interface MYViewController ()
 - (IBAction)XGAction:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)pickView:(UITapGestureRecognizer *)sender;
+- (IBAction)saveAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
 
 @end
 
@@ -27,6 +29,16 @@
     _username.text=currentUser.username;
     //去除多余下划线
     _tableView.tableFooterView = [[UIView alloc]init];
+    // PFUser *currentUser = [PFUser currentUser];
+    PFFile *photo = currentUser[@"photo"];
+    [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:photoData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _photo.image = image;
+            });
+        }
+    }];
     [self requestData];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestData) name:@"refreshMine" object:nil];
   
@@ -93,6 +105,36 @@
     [actionSheet setExclusiveTouch:YES];
     actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
     [actionSheet showInView:self.view];
+
+}
+
+- (IBAction)saveAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    if (_photo.image == nil) {//没有照片
+        [Utilities popUpAlertViewWithMsg:@"请选择一张照片" andTitle:nil];
+        return;
+    }
+    
+    PFUser *obj = [PFUser currentUser];
+    
+    //照片上传 本地图片转为PNG
+    NSData *photoData = UIImagePNGRepresentation(_photo.image);
+    PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
+    obj[@"photo"] = photoFile;
+    
+    //设置菊花
+    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+    //保存
+    [obj saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [aiv stopAnimating];
+        if (succeeded) {//成功
+            
+            //返回上一页面
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            [Utilities popUpAlertViewWithMsg:nil andTitle:nil];
+        }
+    }];
+    
 
 }
 //摄像头

@@ -10,6 +10,8 @@
 #import "MYViewController.h"
 @interface LeftViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *photo;
+
 @end
 
 @implementation LeftViewController
@@ -23,6 +25,15 @@
     PFUser *user = [PFUser currentUser];
     if (user) {
         NSLog(@"in123");
+        PFFile *photo = user[@"photo"];
+        [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
+            if (!error) {
+                UIImage *image = [UIImage imageWithData:photoData];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    _photo.image = image;
+                });
+            }
+        }];
         
         [self LoginData];
         _btn1.enabled=YES;
@@ -31,12 +42,14 @@
     }else{
         
         [self pToLogin];
+        _photo.image = nil;
         //        按钮能点击
         _btn2.enabled=YES;
         _btn1.enabled=NO;
         _btn3.enabled=NO;
     }
 }
+
 
 - (IBAction)loginOUT:(id)sender {
     
