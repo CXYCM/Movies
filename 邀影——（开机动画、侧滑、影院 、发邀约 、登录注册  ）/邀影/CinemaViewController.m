@@ -173,13 +173,13 @@
     UIControl *titleView = [[UIControl alloc] initWithFrame:CGRectZero];
     titleView.frame = CGRectMake(0, 0, 100, 40);
     titleView.tag = 2014+section;
-    titleView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hotMovieBottomImage@2x.png"]];
+    titleView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"black.png"]];
     [titleView addTarget:self action:@selector(sectionAction:) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 0, 0)];
     textLabel.font = [UIFont systemFontOfSize:14];
     textLabel.backgroundColor = [UIColor clearColor];
-    textLabel.textColor = [UIColor whiteColor];
+    textLabel.textColor = [UIColor grayColor];
     textLabel.text = name;
     [textLabel sizeToFit];
     [titleView addSubview:textLabel];

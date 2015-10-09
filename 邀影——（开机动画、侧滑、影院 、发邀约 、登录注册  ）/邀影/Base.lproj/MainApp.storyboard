@@ -817,6 +817,12 @@
                                     <action selector="loginOUT:" destination="sUO-cO-htC" eventType="touchUpInside" id="Obi-TZ-9sT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEV-tG-n7z">
+                                <rect key="frame" x="0.0" y="20" width="312" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.46607420900000002" green="0.82911142680000005" blue="0.80603390819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weJ-zF-nFJ">
                                 <rect key="frame" x="150" y="88" width="111" height="70"/>
                                 <constraints>
@@ -830,12 +836,6 @@
                                     <segue destination="MLU-fD-5om" kind="show" id="7Nq-gf-BW3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEV-tG-n7z">
-                                <rect key="frame" x="0.0" y="20" width="312" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.46607420900000002" green="0.82911142680000005" blue="0.80603390819999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9680003157" green="0.90897041329999995" blue="0.90493588800000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
