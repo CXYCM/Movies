@@ -18,16 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    PFFile *photo = _obj[@"photo"];
-    [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
-        if (!error) {
-            UIImage *image = [UIImage imageWithData:photoData];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                _photoIV.image = image;
-            });
-        }
-    }];
+    PFUser *user = [PFUser currentUser];
+    PFFile *photo = user[@"photo"];
+        [photo getDataInBackgroundWithBlock:^(NSData *photoData, NSError *error) {
+            if (!error) {
+                UIImage *image = [UIImage imageWithData:photoData];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    _photoIV.image = image;
+                });
+            }
+        }];
     
     NSDateFormatter*formatter=[[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];

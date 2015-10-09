@@ -124,8 +124,8 @@
     ip = indexPath;
     PFObject *object = [_objectsForShow objectAtIndex:ip.row];
     NSLog(@"%@", object[@"object"]);
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示"
-         message: [object[@"object"] integerValue] == 1 ? @"是否确认取消应邀？" : @"是否确认应邀？"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提醒"
+         message: [object[@"object"] integerValue] == 1 ? @"是否确认取消应邀？" : @"是否确认应邀？\n 如若出事 本公司概不负责"
                                                        delegate:self
                                               cancelButtonTitle:@"取消"
                                               otherButtonTitles:@"确认", nil];
