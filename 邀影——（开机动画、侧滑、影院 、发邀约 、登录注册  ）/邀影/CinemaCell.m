@@ -38,19 +38,19 @@
 {
     _ratingLabel1 = [[UILabel alloc] initWithFrame:CGRectZero];
     _ratingLabel1.font = [UIFont systemFontOfSize:14];
-    _ratingLabel1.textColor = kFontColor;
+    _ratingLabel1.textColor = [UIColor redColor];
     _ratingLabel1.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_ratingLabel1];
     
     _ratingLabel2 = [[UILabel alloc] initWithFrame:CGRectZero];
     _ratingLabel2.font = [UIFont systemFontOfSize:12];
-    _ratingLabel2.textColor = kFontColor;
+    _ratingLabel2.textColor = [UIColor redColor];
     _ratingLabel2.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_ratingLabel2];
     
     _priceLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _priceLabel.font = [UIFont systemFontOfSize:18];
-    _priceLabel.textColor = kFontColor;
+    _priceLabel.textColor = [UIColor redColor];
     _priceLabel.backgroundColor = [UIColor clearColor];
     _priceLabel.textAlignment = NSTextAlignmentRight;
     [self.contentView addSubview:_priceLabel];

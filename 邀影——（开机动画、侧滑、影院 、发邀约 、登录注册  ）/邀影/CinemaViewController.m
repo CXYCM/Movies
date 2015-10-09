@@ -179,7 +179,7 @@
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 0, 0)];
     textLabel.font = [UIFont systemFontOfSize:14];
     textLabel.backgroundColor = [UIColor clearColor];
-    textLabel.textColor = [UIColor grayColor];
+    textLabel.textColor = [UIColor blackColor];
     textLabel.text = name;
     [textLabel sizeToFit];
     [titleView addSubview:textLabel];
